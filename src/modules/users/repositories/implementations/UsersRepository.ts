@@ -47,8 +47,10 @@ class UsersRepository implements IUsersRepository {
   }
 
   turnAdmin(receivedUser: User): User {
-    receivedUser.admin = true;
-    receivedUser.updated_at = new Date();
+    Object.assign(receivedUser, {
+      admin: true,
+      updated_at: new Date(),
+    });
 
     return receivedUser;
   }

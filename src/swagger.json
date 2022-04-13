@@ -8,6 +8,12 @@
       "email": "felipefelizatti215@gmail.com"
     }
   },
+  "tags": [
+    {
+      "name": "users",
+      "description": "Management users"
+    }
+  ],
   "paths": {
     "/users": {
       "post": {
@@ -173,12 +179,12 @@
           }
         }
       },
-      "get": {
+      "patch": {
         "tags": [
           "users"
         ],
-        "summary": "List one user",
-        "description": "List one user",
+        "summary": "Turn admin a user",
+        "description": "Turn admin a user",
         "parameters": [
           {
             "in": "path",
@@ -245,13 +251,15 @@
             }
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/users/": {
+      "get": {
         "tags": [
           "users"
         ],
-        "summary": "Turn admin a user",
-        "description": "Turn admin a user",
+        "summary": "List one user",
+        "description": "List one user",
         "parameters": [
           {
             "in": "path",

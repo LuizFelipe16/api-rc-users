@@ -18,7 +18,7 @@ class ListAllUsersController {
     } catch (err) {
 
       return response.status(400).json({
-        error: "error message!"
+        error: "You need to be an administrator to list all users!"
       });
     }
   }
